@@ -25,26 +25,37 @@
           ></a>
           <ul class="navbar-nav me-5">
             <li class="nav-item px-3">
-              <a class="nav-link active fs-5" aria-current="page" href="/">Home</a>
+              <a class="nav-link active fs-5" aria-current="page" href="/"
+                >Home</a
+              >
             </li>
             <li class="nav-item px-3">
               <a class="nav-link fs-5" href="/dashboard">Dashboard</a>
             </li>
-            {{#if loggedIn}}
             <li class="nav-item px-3">
-              <a class="nav-link fs-5" href="/logout">Logout</a>
+              <a class="nav-link fs-5" href="/login">Login</a>
             </li>
-            {{else}}
-            <li class="nav-item px-3">
-                <a class="nav-link fs-5" href="/login">Login</a>
-            </li>
-            {{/if}}
           </ul>
         </div>
       </nav>
     </header>
 
-    <main>{{{ body }}}</main>
+    <main>
+      <div class="card border border-dark post">
+        <div class="card-header bg-body-tertiary">
+          {{user.username}} posted on {{ format_date created_at}}
+        </div>
+        <div class="card-body">
+          <a class="card-title fs-5" href="/post/{{id}}">{{title}}</a>
+          <br />
+          <p class="card-text">{{body}}</p>
+        </div>
+        <div class="card-footer bg-body-tertiary">
+          <a href="/post/{{id}}">
+            {{comments.length}} {{format_plural "comment" comments.length}}</a>
+        </div>
+      </div>
+    </main>
 
     <footer class="bg-body-tertiary position-absolute bottom-0 start-0 w-100">
       <p class="p-3 ms-4 fs-5">
@@ -53,10 +64,5 @@
         climbing plants, perfect for coding.
       </p>
     </footer>
-
-    {{#if loggedIn}}
-    <script src="./public/js/logout.js"></script>
-    {{/if}}
-
   </body>
 </html>

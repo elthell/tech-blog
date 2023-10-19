@@ -1,0 +1,17 @@
+<div class="card border border-dark post">
+  <div class="card-header bg-body-tertiary">
+    {{user.username}}
+    posted on
+    {{format_date created_at}}
+  </div>
+  <div class="card-body">
+    <a class="card-title fs-5" href="/post/{{id}}">{{title}}</a>
+    <br />
+    <p class="card-text">{{body}}</p>
+  </div>
+  <div class="card-footer bg-body-tertiary">
+    <a href="/post/{{id}}">
+      {{comments.length}}
+      {{format_plural "comment" comments.length}}</a>
+  </div>
+</div>
