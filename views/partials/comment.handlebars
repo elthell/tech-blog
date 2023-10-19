@@ -1,0 +1,9 @@
+<div class="comment-list">
+  {{#each this}}
+    <ul class="comment list-group list-group-horizontal border border-dark">
+      <li class="list-group-item"><i class="fa-solid fa-angles-right"></i></li>
+      <li class="list-group-item fw-bold">{{user.username}}</li>
+      <li class="list-group-item">{{text}}</li>
+    </ul>
+  {{/each}}
+</div>

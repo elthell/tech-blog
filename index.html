@@ -52,16 +52,25 @@
         </div>
         <div class="card-footer bg-body-tertiary">
           <a href="/post/{{id}}">
-            {{comments.length}} {{format_plural "comment" comments.length}}</a>
+            {{comments.length}} {{format_plural "comment" comments.length}}</a
+          >
         </div>
       </div>
+
+      <ul class="comment list-group list-group-horizontal border border-dark">
+        <li class="list-group-item">
+          <i class="fa-solid fa-angles-right"></i>
+        </li>
+        <li class="list-group-item fw-bold">{{user.username}}</li>
+        <li class="list-group-item">{{text}}</li>
+      </ul>
     </main>
 
     <footer class="bg-body-tertiary position-absolute bottom-0 start-0 w-100">
       <p class="p-3 ms-4 fs-5">
         <i class="fa-solid fa-tree"></i>
         n. a shady garden alcove with sides and a roof formed by trees or
-        climbing plants, perfect for coding.
+        climbing plants - perfect for coding!
       </p>
     </footer>
   </body>
