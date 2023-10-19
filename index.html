@@ -40,32 +40,69 @@
       </nav>
     </header>
 
-    <main class="d-flex flex-column align-items-center">
-      <section class="homepage">
-        <div class="card border border-dark post">
-          <div class="card-header bg-body-tertiary">
-            {{user.username}} posted on {{ format_date created_at}}
-          </div>
-          <div class="card-body">
-            <a class="card-title fs-5" href="/post/{{id}}">{{title}}</a>
-            <br />
-            <p class="card-text">{{body}}</p>
-          </div>
-          <div class="card-footer bg-body-tertiary">
-            <a href="/post/{{id}}">
-              {{comments.length}} {{format_plural "comment" comments.length}}</a
-            >
+    <main class="container-fluid">
+      <section class="dashboard row justify-content-center">
+        <div class="col-5 pe-4 d-flex justify-content-end">
+          <div class="mt-5 position-fixed">
+            <h4 class="fw-medium text-center">
+              <i class="fa-solid fa-seedling"></i>new post
+            </h4>
+            <form class="post p-3 border border-dark rounded-2">
+              <div class="mb-3">
+                <label for="post-title" class="form-label">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="post-title"
+                  placeholder="Post Title"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="post-body" class="form-label">Post</label>
+                <textarea
+                  class="form-control"
+                  id="post-body"
+                  rows="3"
+                  placeholder="Example text..."
+                ></textarea>
+              </div>
+              <div class="d-grid col-4 mx-auto">
+                <button type="submit" class="btn btn-outline-dark">Post</button>
+              </div>
+            </form>
           </div>
         </div>
 
-        <ul class="comment list-group list-group-horizontal border border-dark">
-          <li class="list-group-item">
-            <i class="fa-solid fa-angles-right"></i>
-          </li>
-          <li class="list-group-item fw-bold">{{user.username}}</li>
-          <li class="list-group-item">{{text}}</li>
-        </ul>
+        <div class="col-7 ps-4">
+            <h5 class="mt-5 ms-5">You don't have any posts yet - make one!</h4>
+          <!-- <div class="card border border-dark post">
+            <div class="card-header bg-body-tertiary">
+              {{user.username}} posted on {{ format_date created_at}}
+            </div>
+            <div class="card-body">
+              <a class="card-title fs-5" href="/post/{{id}}">{{title}}</a>
+              <br />
+              <p class="card-text">{{body}}</p>
+            </div>
+            <div class="card-footer bg-body-tertiary">
+              <a href="/post/{{id}}">
+                {{comments.length}} {{format_plural "comment"
+                comments.length}}</a
+              >
+            </div>
+          </div>
 
+          <ul
+            class="comment list-group list-group-horizontal border border-dark"
+          >
+            <li class="list-group-item">
+              <i class="fa-solid fa-angles-right"></i>
+            </li>
+            <li class="list-group-item fw-bold">{{user.username}}</li>
+            <li class="list-group-item">{{text}}</li>
+          </ul> -->
+          
+        </div>
       </section>
     </main>
 

@@ -1,0 +1,45 @@
+<section class="dashboard row justify-content-center">
+
+  <div class="col-5 pe-4 d-flex justify-content-end">
+    <div class="mt-5 position-fixed">
+      <h4 class="fw-medium text-center">
+        <i class="fa-solid fa-seedling"></i>new post
+      </h4>
+      <form class="post p-3 border border-dark rounded-2">
+        <div class="mb-3">
+          <label for="post-title" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="post-title"
+            placeholder="Post Title"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="post-body" class="form-label">Post</label>
+          <textarea
+            class="form-control"
+            id="post-body"
+            rows="3"
+            placeholder="Example text..."
+          ></textarea>
+        </div>
+        <div class="d-grid col-4 mx-auto">
+          <button type="submit" class="btn btn-outline-dark">Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-7 ps-4">
+  {{#if posts.length}}
+    {{#each posts as |post|}}
+        {{> post-info post}}
+    {{/each}}
+  {{else}}
+    <h5 class="mt-5 ms-5">You don't have any posts yet - make one!</h4>
+  {{/if}}
+  </div>
+</section>
+
+<script src="../public/js/newPost.js"></script>
