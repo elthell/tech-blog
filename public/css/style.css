@@ -1,7 +1,14 @@
+/* post partial */
 .post {
     width: 40rem;
 }
 
+/* comment partial */
 .comment {
     width: 40rem;
+}
+
+/* login view */
+.signup-form, .login-form {
+    width: 50rem;
 }

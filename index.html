@@ -41,7 +41,92 @@
     </header>
 
     <main class="container-fluid">
-      <section class="dashboard row justify-content-center">
+      <section class="login row justify-content-center">
+        <!-- login form -->
+        <div class="col me-4 d-flex justify-content-end">
+          <div class="login-form mt-5">
+            <h4 class="text-center">Login</h4>
+            <form class="border border-dark rounded-2 p-3">
+              <div class="mb-3">
+                <label for="userEmail" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="userEmail"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="userPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="userPassword" />
+              </div>
+              <div class="d-grid col-4 mx-auto">
+                <button type="submit" class="btn btn-outline-dark">
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- signup form -->
+        <div class="col border-start ps-4">
+          <h2 class="ms-2">Don't have an account? Sign up!</h2>
+          <div class="signup-form mt-5">
+            <h4 class="text-center">Signup</h4>
+            <form class="border border-dark rounded-2 p-3">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+                <div id="emailHelp" class="form-text">
+                  Password must be at least 8 characters long.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="password-verfication">Verify Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password-verification"
+                />
+              </div>
+              <div class="d-grid col-4 mx-auto">
+                <button type="submit" class="btn btn-outline-dark">
+                  Signup
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="dashboard row justify-content-center">
         <div class="col-5 pe-4 d-flex justify-content-end">
           <div class="mt-5 position-fixed">
             <h4 class="fw-medium text-center">
@@ -74,8 +159,7 @@
         </div>
 
         <div class="col-7 ps-4">
-            <h5 class="mt-5 ms-5">You don't have any posts yet - make one!</h4>
-          <!-- <div class="card border border-dark post">
+          <div class="card border border-dark post">
             <div class="card-header bg-body-tertiary">
               {{user.username}} posted on {{ format_date created_at}}
             </div>
@@ -101,9 +185,9 @@
             <li class="list-group-item fw-bold">{{user.username}}</li>
             <li class="list-group-item">{{text}}</li>
           </ul> -->
-          
-        </div>
-      </section>
+
+      <!-- </div>
+      </section> -->
     </main>
 
     <footer class="bg-body-tertiary position-fixed bottom-0 start-0 w-100">
