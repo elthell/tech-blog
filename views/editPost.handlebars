@@ -8,7 +8,7 @@
         <i class="fa-solid fa-arrow-left"></i>
         back to dashboard
       </a>
-      <form class="post p-3 border border-dark rounded-2">
+      <form id="edit-post" class="post p-3 border border-dark rounded-2">
         <div class="mb-3">
           <label for="post-title" class="form-label">Edit Title</label>
           <input
@@ -29,7 +29,7 @@
         </div>
         <div class="col-4 btn-group mx-auto" role="group">
           <button type="submit" class="btn btn-outline-dark">Save</button>
-          <button type="submit" class="btn btn-outline-dark">Delete</button>
+          <button id="delete-post-btn" class="btn btn-outline-dark">Delete</button>
         </div>
         <div class="card-footer bg-body-tertiary">
           <a href="/post/{{id}}">
@@ -38,7 +38,7 @@
         </div>
       </form>
     </div>
-    <form class="post p-3 border border-dark rounded-2">
+    <form id="comment-form" class="post p-3 border border-dark rounded-2">
       <div class="mb-3">
         <label for="comment-body" class="form-label">Comment</label>
         <textarea id="comment-body" class="form-control"></textarea>

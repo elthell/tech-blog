@@ -1,10 +1,10 @@
 {{> post-info post}}
 
 {{#if loggedIn}}
-<form class="post p-3 border border-dark rounded-2">
+<form id="comment-form" class="post p-3 border border-dark rounded-2">
     <div class="mb-3">
-        <label for="comment-body" class="form-label">Comment</label>
-        <textarea id="comment-body" class="form-control"></textarea>
+        <label for="comment-text" class="form-label">Comment</label>
+        <textarea id="comment-text" class="form-control"></textarea>
     </div>
     <div class="d-grid col-4 mx-auto">
         <button type="submit" class="btn btn-outline-dark">
