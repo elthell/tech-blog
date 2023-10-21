@@ -31,6 +31,11 @@
           <button type="submit" class="btn btn-outline-dark">Save</button>
           <button type="submit" class="btn btn-outline-dark">Delete</button>
         </div>
+        <div class="card-footer bg-body-tertiary">
+          <a href="/post/{{id}}">
+            {{comments.length}}
+            {{format_plural "comment" comments.length}}</a>
+        </div>
       </form>
     </div>
     <form class="post p-3 border border-dark rounded-2">
