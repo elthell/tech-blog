@@ -1,0 +1,52 @@
+<section class="edit-post row justify-content-center">
+  <div class="col-5 pe-4">
+    <div class="mt-5">
+      <a
+        href="/dashboard"
+        class="link-dark link-underline-opacity-75 link-underline-opacity-100-hover fs-4 text-center"
+      >
+        <i class="fa-solid fa-arrow-left"></i>
+        back to dashboard
+      </a>
+      <form class="post p-3 border border-dark rounded-2">
+        <div class="mb-3">
+          <label for="post-title" class="form-label">Edit Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="post-title"
+            value="{{post.title}}"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="post-body" class="form-label">Edit Post</label>
+          <textarea class="form-control" id="post-body">
+            {{post.body}}</textarea>
+        </div>
+        <div class="mb-3">
+          Posted by you on
+          {{format_date post.created_at}}
+        </div>
+        <div class="col-4 btn-group mx-auto" role="group">
+          <button type="submit" class="btn btn-outline-dark">Save</button>
+          <button type="submit" class="btn btn-outline-dark">Delete</button>
+        </div>
+      </form>
+    </div>
+    <form class="post p-3 border border-dark rounded-2">
+      <div class="mb-3">
+        <label for="comment-body" class="form-label">Comment</label>
+        <textarea id="comment-body" class="form-control"></textarea>
+      </div>
+      <div class="d-grid col-4 mx-auto">
+        <button type="submit" class="btn btn-outline-dark">
+          Add Comment
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script src="../public/js/editPost.js"></script>
+<script src="../public/js/deletePost.js"></script>
+<script src="../public/js/newComment.js"></script>
