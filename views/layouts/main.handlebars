@@ -35,11 +35,11 @@
             </li>
             {{#if loggedIn}}
               <li class="nav-item px-3">
-                <a id="logout-btn" class="nav-link fs-5" href="">Logout</a>
+                <a id="logout-btn" class="nav-link fs-5">Logout</a>
               </li>
             {{else}}
               <li class="nav-item px-3">
-                <a class="nav-link fs-5" href="/login">User</a>
+                <a class="nav-link fs-5" href="/login">Signup / Login</a>
               </li>
             {{/if}}
           </ul>
@@ -49,9 +49,7 @@
 
     <main class="container-fluid">{{{body}}}</main>
 
-    <footer
-      class="bg-body-tertiary position-fixed bottom-0 start-0 w-100 mb-t"
-    >
+    <footer class="bg-body-tertiary position-fixed bottom-0 start-0 w-100 mb-t">
       <p class="p-3 ms-4 fs-5">
         <i class="fa-solid fa-tree"></i>
         n. a shady garden alcove with sides and a roof formed by trees or
