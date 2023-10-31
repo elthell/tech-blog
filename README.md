@@ -10,14 +10,14 @@ N/A
 
 ## Usage
 
-Deployment: 
+Deployment:
 
 Preview:
-![]()
+![!An image of the homepage of Arbor, a blogging site for programmers - showing a list of posts](./public/images/arbor-img.png)
 
 ## Credits
 
-N/A
+Accessing css in handlebars: https://stackoverflow.com/questions/47371954/cannot-access-stylesheet-with-handlebars
 
 ## License
 
