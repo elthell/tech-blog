@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Post, User, Comment } = require("../models");
+const withAuth = require("../utils/auth");
 
 // GET - homepage
 router.get("/", async (req, res) => {
@@ -10,13 +11,7 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: [
-            "id",
-            "comment_text",
-            "post_id",
-            "user_id",
-            "created_at",
-          ],
+          attributes: ["id", "text", "post_id", "user_id", "created_at"],
           include: {
             model: User,
             attributes: ["username"],
@@ -55,13 +50,7 @@ router.get("/post/:id", async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: [
-            "id",
-            "comment_text",
-            "post_id",
-            "user_id",
-            "created_at",
-          ],
+          attributes: ["id", "text", "post_id", "user_id", "created_at"],
           include: {
             model: User,
             attributes: ["username"],
@@ -89,18 +78,18 @@ router.get("/post/:id", async (req, res) => {
 });
 
 // GET - user
-router.get("/user", async (req, res) => {
+router.get("/login", async (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
     return;
   }
-  res.render("user");
+  res.render("login");
 });
 
 //
 
 // GET - dashboard
-router.get("/dashboard", async (req, res) => {
+router.get("/dashboard", withAuth, async (req, res) => {
   try {
     // all user posts
     const postData = await Post.findAll({
@@ -111,13 +100,7 @@ router.get("/dashboard", async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: [
-            "id",
-            "comment_text",
-            "post_id",
-            "user_id",
-            "created_at",
-          ],
+          attributes: ["id", "text", "post_id", "user_id", "created_at"],
           include: {
             model: User,
             attributes: ["username"],
@@ -153,13 +136,7 @@ router.get("/edit/:id", async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: [
-            "id",
-            "comment_text",
-            "post_id",
-            "user_id",
-            "created_at",
-          ],
+          attributes: ["id", "text", "post_id", "user_id", "created_at"],
           include: {
             model: User,
             attributes: ["username"],
@@ -185,3 +162,5 @@ router.get("/edit/:id", async (req, res) => {
     console.log(err);
   }
 });
+
+module.exports = router;

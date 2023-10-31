@@ -1,4 +1,4 @@
-{{> post-info post}}
+{{> post post}}
 
 {{#if loggedIn}}
 <form id="comment-form" class="post p-3 border border-dark rounded-2">
@@ -14,7 +14,7 @@
 </form>
 {{/if}}
 
-{{> comments post.comments}}
+{{> comment post.comments}}
 
 
 {{#if loggedIn}}
