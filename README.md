@@ -10,7 +10,7 @@ N/A
 
 ## Usage
 
-Deployment:
+Deployment: https://hidden-coast-27803-9678a89006a8.herokuapp.com/
 
 Preview:
 ![!An image of the homepage of Arbor, a blogging site for programmers - showing a list of posts](./public/images/arbor-img.png)
